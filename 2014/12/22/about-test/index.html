@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-  <title>鼠标右键慢 | 角落</title>
+  <title>about test | 角落</title>
   <meta name="description" content="" />
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
@@ -188,7 +188,7 @@
                 
                 <div id="nav-container">
                     <div class="post-navbar" style="line-height: 63px;display:none">
-                        <li id="navbar-title"><a href="#">鼠标右键慢</a></li>
+                        <li id="navbar-title"><a href="#">about test</a></li>
                         <li id="navbar-toc" style="border-left: none">
                             <a style="padding-right: 15px">
                                 <span id="toc-content" >Introduction</span><i class="fa fa-chevron-down" ></i>
@@ -217,32 +217,47 @@
                   <div class="tag-tile">
                       
                   </div>
-                <h1 class="post-title" style="margin: 14px 0;color:#50585D">鼠标右键慢</h1>
+                <h1 class="post-title" style="margin: 14px 0;color:#50585D">about test</h1>
 
                     <div class="post-meta">
                         Post on<span class="fa fa-clock-o"></span>
-                        <time datetime="2014-12-22T04:13:02.000Z"
+                        <time datetime="2014-12-22T04:24:56.000Z"
                               itemprop="datePublished">12月 22 2014</time>
                     </div>
     </span>
 
         <section class="post-content">
-            <ul>
-<li>可能是软件的兼容性问题，像多个杀毒或是多个清理工具等。<br>右键菜单东西项目太多也可能导致弹出慢。找个优化工具整理一下，把不常用的清理掉，就会好些</li>
-<li>由于Intel显卡驱动在桌面右键的加载项造成。</li>
-<li>解决方案：清理注册表中桌面右键加载项，点击开始，输入regedit，找到HKEY_CLASSES_ROOT\Directory\Background\shellex\ContextMenuHandlers\igfxcui，然后删掉igfxcui这个子键，退出之后就OK了。<a id="more"></a>
+            <blockquote>
+<p><a href="http://segmentfault.com/q/1010000002415710" target="_blank">http://segmentfault.com/q/1010000002415710</a></p>
+<h2 id="测试建立和维持对代码的自信心">测试建立和维持对代码的自信心</h2>
+<p>对于程序员个体而言，测试最大的意义在于“<strong>建立和维持对代码的自信心</strong>”，这一点大致可分为两个层面：</p>
+</blockquote>
+<ol>
+<li><p>从无到有的时候。如果你对要写的代码无比熟练，挥手即来，那么测试对你的意义微乎其微（此处假定代码的编写和维护都是你一个人，不牵扯协作开发者。并且就算有牵扯，测试的必要性也要视乎你们的协作方式，这个后面再说）。可如果你对要写的东西很陌生，脑袋里一团浆糊的时候，测试就可以变成你的“引路人”。简单地说，就是把复杂的大问题拆分成简单的小问题，然后用测试描述每一个小问题的输入输出，接着失败 =代码实现 =成功，如此循环往复，最终完成了整个解决方案。<br>显然，不写测试也可以这么做（指拆分复杂问题的方法论），但是测试会有一些好处：</p>
+<p> 1.1. 每一个测试只对一个问题单元负责，哪里不通过哪里有问题，这有助于把复杂逻辑解构成若干简单的模块化的代码。等到重构的时候你就知道这有什么好处了。没有构造良好的测试，没人愿意重构。这对于代码的维护是很有帮助的，除非你是一锤子项目，那就无所谓了。</p>
 </li>
-</ul>
+</ol>
+<pre><code>1.2. 因为测试先于代码编写（其实就是 TDD），所以对于接口的设计往往是先于内部实现完成的。这是一种很好地代码设计习惯，然而虽然人人都知道但大多数人总是做不到。测试则会间接的“逼迫”你先考虑接口设计，再关注具体实现，若你的接口设计有问题，通过先写测试很容易就能察觉到，避免写一大堆代码之后才发现这么写不合适。
+</code></pre><ol>
+<li>从有到优的时候。</li>
+</ol>
+<pre><code><span class="bullet">1. </span>修补 Bug 或是增加新的业务逻辑也算是重构的一部分（不太严格的说）。测试本身就是对业务逻辑的实例化描述，你的测试能否覆盖到业务实际的范围取决于你对业务本身的了解程度有多深，不过反过来就算你有遗漏或者理解上的偏差也没关系，因为那些正确的测试已经保证了你实现的正确的部分。接下来对于错误（bug）你只需要修正有问题的测试或者补充没有覆盖到的逻辑；而对于新增加的业务也是一样的道理，扩充测试用例即可。当然最后一步是让都 pass。如果你测试写得好——我是说语义良好，那么它几乎就可以拿来做需求文档了。回头 PM 说你那儿那儿做得不对，你可以搬出测试给他/她逐条讲解，很容易就能知道你们之间的误差在哪里。
+
+
+<span class="bullet">2. </span>除此之外就是针对代码质量的重构了，没有测试的时候最头疼的问题就是不敢随便对代码动刀子，因为你没有可靠的质量保障，有了测试就好多了（不能保障百分之百不会出岔子，毕竟测试也是人写的）。
+</code></pre><h2 id="推荐">推荐</h2>
+<p>推荐两个东西，一个是 Gary Bernhardt 录制的一系列视频，大量的讲解了实际项目中的测试理论和技巧，都是干货没有无意义的东西，但是有难度，要反复多看多体会：<a href="https://www.destroyallsoftware.com/screencasts/catalog" target="_blank">https://www.destroyallsoftware.com/screencasts/catalog</a></p>
+<p>还有一个是来自于现实世界中一个非常有名的例子，一群人利用测试和重构挽救了一个差点不可救药的经典项目 Redmine，之后他们为这次大规模的重构写了一本书：Refactoring Redmine。</p>
 
         </section>
         <hr/>
         <nav class="pagination" style="width:auto" role="pagination">
             
-            <a data-pjax class="newer-posts" href="/2014/12/22/about-test/">← Prev Post</a>
+            <a style="cursor:default" class="newer-posts" href="#">This is the First Post</a>
             
             <a class="share-button" data-original-title title>Share this Post</a>
             
-            <a data-pjax class="older-posts" href="/2014/12/05/20141204crash/">Next Post →</a>
+            <a data-pjax class="older-posts" href="/2014/12/22/鼠标右键慢/">Next Post →</a>
             
         </nav>
         <br/>
